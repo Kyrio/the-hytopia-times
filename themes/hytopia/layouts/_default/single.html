@@ -3,7 +3,7 @@
     <h2>
         {{ .Title }}
     </h2>
-    {{ $summary := .Params.caption }}
+    {{ $summary := .Description }}
     {{ $credit := .Params.credit }}
     {{ with .Resources.GetMatch "cover.jpg"}}
     <div class="cover" style="background-image: url('{{ .RelPermalink }}')">

@@ -2,7 +2,7 @@
 title = "Pokémon director blames Brexit for restricted roster in latest Switch title"
 date = 2019-06-20
 draft = false
-caption = "\"We considered how a no-deal situation might affect Pokémon trading\", said Shigeru Ohmori in a Q&A session at E3."
+description = "\"We considered how a no-deal situation might affect Pokémon trading\", said Shigeru Ohmori in a Q&A session at E3."
 credit = "Image from Nintendo"
 +++
 
