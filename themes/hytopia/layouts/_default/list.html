@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ range .Pages }}
+<article>
+    <h2>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+    {{ $summary := .Params.caption }}
+    {{ $credit := .Params.credit }}
+    {{ with .Resources.GetMatch "cover.jpg"}}
+    <div class="cover cover-small" style="background-image: url('{{ .RelPermalink }}')">
+        <div class="caption">{{ $summary }} &mdash; {{ $credit}}</div>
+    </div>
+    {{ end }}
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <a href="{{ .RelPermalink }}">Read more &gt;&gt;</a>
+    {{ end }}
+</article>
+{{ end }}
+{{ end }}

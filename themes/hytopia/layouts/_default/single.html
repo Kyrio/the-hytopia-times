@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article>
+    <h2>
+        {{ .Title }}
+    </h2>
+    {{ $summary := .Params.caption }}
+    {{ $credit := .Params.credit }}
+    {{ with .Resources.GetMatch "cover.jpg"}}
+    <div class="cover" style="background-image: url('{{ .RelPermalink }}')">
+        <div class="caption">{{ $summary }} &mdash; {{ $credit}}</div>
+    </div>
+    {{ end }}
+    {{ .Content }}
+</article>
+{{ end }}
