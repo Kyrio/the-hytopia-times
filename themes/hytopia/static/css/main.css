@@ -54,6 +54,11 @@ article {
     margin-bottom: 2rem;
 }
 
+article h2 a,
+article h2 a:visited {
+    color: #303030;
+}
+
 .cover {
     display: flex;
     align-items: flex-end;
