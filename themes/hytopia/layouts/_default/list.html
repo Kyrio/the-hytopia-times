@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ range .Pages }}
 <article>
+    <div class="date">{{ .Date.Format "January 2, 2006" }}</div>
     <h2>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>

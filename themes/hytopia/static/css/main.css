@@ -14,8 +14,11 @@
 }
 
 body {
-    color: #303030;
-    background-color: #fafafa;
+    --color-text: #303030;
+    --color-background: #fafafa;
+
+    color: var(--color-text);
+    background-color: var(--color-background);
     margin: 0 auto;
     padding: 2rem 1rem;
     max-width: 50rem;
@@ -54,9 +57,21 @@ article {
     margin-bottom: 2rem;
 }
 
+article h2 {
+    font-family: 'Cambria', 'Cochin', 'Georgia', serif;
+}
+
 article h2 a,
 article h2 a:visited {
-    color: #303030;
+    color: var(--color-text);
+}
+
+.date {
+    font-family: 'Cambria', 'Cochin', 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+    color: #707070;
 }
 
 .cover {
