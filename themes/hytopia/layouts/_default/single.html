@@ -1,13 +1,23 @@
 {{ define "meta" }}
-{{ template "_internal/twitter_cards.html" . }}
-{{ template "_internal/opengraph.html" . }}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
 {{ with .Resources.GetMatch "cover*" }}
-<meta property="og:image" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Permalink }}">
+{{ end }}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description }}">
+{{ with .Resources.GetMatch "cover*" }}
+<meta name="twitter:image" content="{{ .Permalink }}">
 {{ end }}
 {{ end }}
 
 {{ define "main" }}
-<article>
+<article> {{ .Site.Params.title }}
     <h2>
         {{ .Title }}
     </h2>
