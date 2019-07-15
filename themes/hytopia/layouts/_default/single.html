@@ -18,13 +18,15 @@
 
 {{ define "main" }}
 <article>
-    <div class="date">{{ .Date.Format "January 2, 2006" }}</div>
+    <div class="date">{{ $dateParam := .Date.Format "2006-01-02" }}
+        <time datetime="{{ $dateParam }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </div>
     <h2>
         {{ .Title }}
     </h2>
     {{ $summary := .Description }}
     {{ $credit := .Params.credit }}
-    {{ with .Resources.GetMatch "cover.jpg"}}
+    {{ with .Resources.GetMatch "cover*"}}
     <div class="cover" style="background-image: url('{{ .RelPermalink }}')">
         <div class="caption">{{ $summary }} &mdash; {{ $credit}}</div>
     </div>
