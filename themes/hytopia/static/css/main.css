@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'UnifrakturCook';
-    font-style: normal;
-    font-weight: 700;
-    src: local('UnifrakturCook'),
-         url('../fonts/unifrakturcook.woff2') format('woff2'),
-         url('../fonts/unifrakturcook.woff') format('woff');
-}
-
 * {
     /* margin: 0; */
     /* padding: 0; */
@@ -22,12 +13,13 @@ body {
     margin: 0 auto;
     padding: 2rem 1rem;
     max-width: 50rem;
-    font-family: 'Georgia', serif;
+    font-family: 'PT Serif', serif;
 }
 
 a {
     color: #3030dd;
     text-decoration: none;
+    font-weight: 700;
 }
 
 a:visited {
@@ -43,6 +35,7 @@ p {
     margin: 0;
     text-align: center;
     font-family: 'UnifrakturCook', serif;
+    font-weight: 700;
 }
 
 .logo a {
@@ -58,7 +51,8 @@ article {
 }
 
 article h2 {
-    font-family: 'Cambria', 'Cochin', 'Georgia', serif;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
 }
 
 article h2 a,
@@ -67,7 +61,7 @@ article h2 a:visited {
 }
 
 .date {
-    font-family: 'Cambria', 'Cochin', 'Georgia', serif;
+    font-family: 'PT Serif', serif;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-weight: bold;
