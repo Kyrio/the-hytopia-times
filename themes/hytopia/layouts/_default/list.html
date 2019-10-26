@@ -9,8 +9,10 @@
     </h2>
     {{ $summary := .Description }}
     {{ $credit := .Params.credit }}
-    {{ with .Resources.GetMatch "cover*"}}
+    {{ with .Resources.ByType "image"}}
+    {{ with .GetMatch "cover*"}}
     <div class="cover cover-small" style="background-image: url('{{ .RelPermalink }}')"></div>
+    {{ end }}
     {{ end }}
     {{ .Summary }}
     {{ if .Truncated }}

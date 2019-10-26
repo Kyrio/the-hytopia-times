@@ -26,10 +26,12 @@
     </h2>
     {{ $summary := .Description }}
     {{ $credit := .Params.credit }}
-    {{ with .Resources.GetMatch "cover*"}}
+    {{ with .Resources.ByType "image"}}
+    {{ with .GetMatch "cover*"}}
     <div class="cover" style="background-image: url('{{ .RelPermalink }}')">
         <div class="caption">{{ $summary }} &mdash; {{ $credit}}</div>
     </div>
+    {{ end }}
     {{ end }}
     {{ .Content }}
 </article>
